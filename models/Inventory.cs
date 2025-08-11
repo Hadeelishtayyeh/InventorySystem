@@ -11,6 +11,19 @@ namespace InventorySystem.Models
         {
             products.Add(product);
         }
+    public void ViewAllProducts()
+    {     if (products.Count==0)
+        {
+         Console.Write("No Product");
+         return;
+        }
+        foreach (var product in products)
+        {
 
+                Console.WriteLine(product);
+
+        }
     }
-}      
+            
+    }
+}
