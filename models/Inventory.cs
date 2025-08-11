@@ -27,6 +27,17 @@ namespace InventorySystem.Models
          public Product SearchProduct(string name)
         {
             return products.Find(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-        }     
+        }   
+           public bool DeleteProduct(string name)
+        {
+            var product = SearchProduct(name);
+            if (product != null)
+            {
+                products.Remove(product);
+                return true;
+            }
+            return false;
+        }
+          
     }
 }
