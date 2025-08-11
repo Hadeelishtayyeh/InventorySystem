@@ -1,25 +1,21 @@
-namespace InventorySystem.models{
-
-public class Product {
-
-  public string name { git; set;}
-public decimal price{ git; set;}
-public int quantity { git; set;}
-
-public Product (string Name ,decimal Price ,int Quantity )
+namespace InventorySystem.Models
 {
-Name = name;
-Price = price;
-Quantity = quantity;
+    public class Product
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }
 
+        public Product(string name, decimal price, int quantity)
+        {
+            Name = name;
+            Price = price;
+            Quantity = quantity;
+        }
 
-}
-
- public override string ToString()
+        public override string ToString()
         {
             return $"Name: {Name}, Price: {Price}, Quantity: {Quantity}";
         }
-}
-
-
+    }
 }
