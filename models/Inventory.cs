@@ -24,6 +24,9 @@ namespace InventorySystem.Models
 
         }
     }
-            
+         public Product SearchProduct(string name)
+        {
+            return products.Find(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        }     
     }
 }
